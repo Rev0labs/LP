@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revolabs Studio | Jasa Website & Automasi Bebas Biaya Server</title>
+  <meta name="description" content="Jasa pembuatan website modern, landing page, dan sistem automasi Google Apps Script tanpa biaya langganan server bulanan. Mulai Rp 350.000.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20100%22%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Font: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#030712',      // Deepest background
+              card: '#0B132B',      // Card surface
+              border: '#1E293B',    // Border line
+              accent: '#38BDF8',    // Cyan Sky
+              indigo: '#6366F1',    // Tech Violet
+              neon: '#10B981',      // Emerald Green
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #030712;
+      color: #F3F4F6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Subtle grid pattern */
+    .bg-grid {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+
+    /* Glow effect */
+    .glow-cyan {
+      box-shadow: 0 0 50px -10px rgba(56, 189, 248, 0.25);
+    }
+    .glow-card:hover {
+      box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-accent selection:text-brand-dark">
+
+  <!-- Glow Background Accents -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-r from-sky-500/15 via-indigo-500/15 to-teal-500/10 blur-[130px] rounded-full"></div>
+    <div class="absolute top-[40%] -left-32 w-[450px] h-[450px] bg-sky-600/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-indigo-600/10 blur-[140px] rounded-full"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-mono font-black text-white text-xl shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300">
+          R
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-sky-400 bg-clip-text text-transparent">
+            Revolabs<span class="text-sky-400">.</span>Studio
+          </span>
+          <span class="block text-[10px] text-slate-400 font-mono tracking-widest uppercase">Web & Automation Lab</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#keunggulan" class="hover:text-sky-400 transition">Keunggulan</a>
+        <a href="#layanan" class="hover:text-sky-400 transition">Layanan</a>
+        <a href="#portofolio" class="hover:text-sky-400 transition">Portofolio</a>
+        <a href="#harga" class="hover:text-sky-400 transition">Paket Harga</a>
+        <a href="#faq" class="hover:text-sky-400 transition">FAQ</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20konsultasi%20pembuatan%20website" 
+           target="_blank" 
+           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-slate-900 bg-gradient-to-r from-sky-400 via-teal-300 to-sky-400 hover:from-sky-300 hover:to-teal-200 shadow-md shadow-sky-400/20 hover:shadow-sky-400/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Konsultasi Gratis</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-sky-500/30 text-sky-400 text-xs sm:text-sm font-mono mb-8 backdrop-blur shadow-sm">
+        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Zero Server Maintenance • 100% Bebas Biaya Bulanan
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.15]">
+        Bikin Website Keren & Tools Bisnis <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-sky-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent">
+          Tanpa Pusing Biaya Langganan.
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto font-normal leading-relaxed">
+        Solusi cerdas untuk UMKM, profesional, & bisnis modern. Kami bangunkan landing page super cepat & sistem otomatisasi terintegrasi Google Spreadsheet. Bayar sekali, aktif selamanya!
+      </p>
+
+      <!-- CTA Action Area -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20ingin%20tanya-tanya%20jasa%20website%20mulai%20350rb" 
+           target="_blank"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-slate-950 bg-gradient-to-r from-sky-400 via-teal-300 to-sky-400 hover:from-sky-300 hover:to-teal-200 shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+          <span>Mulai Bikin Web (Dari Rp 350rb)</span>
+        </a>
+
+        <a href="#portofolio" 
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-semibold text-slate-300 bg-slate-900/80 border border-slate-700/80 hover:bg-slate-800 hover:text-white hover:border-slate-600 transition-all">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+          <span>Lihat Live Demo</span>
+        </a>
+      </div>
+
+      <!-- Trust Badges / Stats -->
+      <div class="mt-16 pt-12 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-left">
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="font-mono text-2xl font-bold text-sky-400">Rp 0,-</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Biaya Server Bulanan</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="font-mono text-2xl font-bold text-emerald-400">&lt; 3 Hari</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Pengerjaan Kilat & Rapi</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="font-mono text-2xl font-bold text-indigo-400">100% Milikmu</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Data di Akun Google Pribadi</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="font-mono text-2xl font-bold text-slate-200">Modern Stack</div>
+          <div class="text-xs text-slate-400 mt-1 font-medium">Bebas Lemot & Aman</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN / KENAPA REVOLABS -->
+  <section id="keunggulan" class="py-20 lg:py-28 border-t border-slate-800/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Mengapa Revolabs Studio?</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Tinggalkan Solusi Ribet & Bikin Boncos.
+        </h2>
+        <p class="text-slate-400 mt-4 text-base">
+          Kami memadukan kekuatan cloud modern dan ekosistem Google untuk memberikan website berperforma tinggi tanpa biaya recurring yang membebani.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-900/40 border border-slate-800/80 hover:border-sky-500/50 transition duration-300 glow-card group">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="server-off" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Tanpa Biaya Server Bulanan</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Tidak perlu bayar tagihan sewa hosting Rp 50rb–200rb tiap bulan. Website kamu di-hosting di infrastruktur global (seperti GitHub Pages) yang stabil, gratis, dan anti-down.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-900/40 border border-slate-800/80 hover:border-emerald-500/50 transition duration-300 glow-card group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Database di Google Spreadsheet</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Data pesanan, registrasi, atau formulir langsung masuk otomatis ke Google Sheet akun kamu sendiri. Mudah dibaca, diedit, dan diekspor kapan pun lewat smartphone.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-900/40 border border-slate-800/80 hover:border-indigo-500/50 transition duration-300 glow-card group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Automasi Google Apps Script</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Integrasi sistem otomatis kirim notifikasi order langsung ke Email kamu atau auto-reply ke WhatsApp pelanggan tanpa perlu sewa server backend mahal.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LAYANAN KAMI -->
+  <section id="layanan" class="py-20 bg-slate-950/60 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Solusi Fleksibel</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">
+            Layanan Kami untuk Kebutuhan Bisnismu
+          </h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+          Dari sekadar halaman profil yang elegan hingga sistem input data internal yang mempermudah operasional harian.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-sky-500/40 transition">
+          <div class="text-sky-400 mb-4"><i data-lucide="layout" class="w-8 h-8"></i></div>
+          <h4 class="text-lg font-bold text-white mb-2">Landing Page Bisnis</h4>
+          <p class="text-slate-400 text-sm">Halaman promosi produk/jasa yang didesain estetik, cepat, dan fokus meningkatkan konversi penjualan.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-sky-500/40 transition">
+          <div class="text-teal-400 mb-4"><i data-lucide="calendar-check" class="w-8 h-8"></i></div>
+          <h4 class="text-lg font-bold text-white mb-2">Form Reservasi & Order</h4>
+          <p class="text-slate-400 text-sm">Sistem booking jadwal atau pencatatan pesanan produk yang otomatis tersimpan rapi tanpa manual catat.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-sky-500/40 transition">
+          <div class="text-indigo-400 mb-4"><i data-lucide="cpu" class="w-8 h-8"></i></div>
+          <h4 class="text-lg font-bold text-white mb-2">Google Apps Script Tools</h4>
+          <p class="text-slate-400 text-sm">Automasi workflow bisnis: kirim email konfirmasi otomatis, generate invoice PDF, atau sinkronisasi data.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-sky-500/40 transition">
+          <div class="text-amber-400 mb-4"><i data-lucide="globe" class="w-8 h-8"></i></div>
+          <h4 class="text-lg font-bold text-white mb-2">Custom Domain Setup</h4>
+          <p class="text-slate-400 text-sm">Bisa pakai domain gratis bawaan, atau kami bantu pasangkan nama domain bisnismu sendiri (.com, .id, .my.id).</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PORTOFOLIO & LIVE DEMO SHOWCASE -->
+  <section id="portofolio" class="py-20 lg:py-28 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Hasil Karya & Proyek Nyata</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Portofolio & Eksperimen Live
+        </h2>
+        <p class="text-slate-400 mt-4 text-base">
+          Cek beberapa proyek yang sudah aktif dan demo interaktif yang kami bangun dengan standar modern.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: belitelur.my.id -->
+        <div class="rounded-2xl bg-slate-900/70 border border-slate-800 overflow-hidden flex flex-col hover:border-sky-500/50 transition group">
+          <div class="h-48 bg-gradient-to-tr from-amber-950/40 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800/80 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+            <div class="text-center z-10">
+              <span class="inline-block p-3 rounded-xl bg-amber-500/20 text-amber-400 mb-2 font-mono text-2xl font-bold">🥚</span>
+              <div class="font-mono text-sm text-slate-300 font-semibold">belitelur.my.id</div>
+              <div class="text-xs text-amber-400 font-mono">E-Commerce & Distribusi Telur</div>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-sky-950 text-sky-400 border border-sky-800/60">Live Client Web</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-950 text-emerald-400 border border-emerald-800/60">Pemesanan WA</span>
+              </div>
+              <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition">Beli Telur Online Shop</h4>
+              <p class="text-slate-400 text-sm mt-2">
+                Website pemesanan telur segar untuk supplier & retail dengan integrasi pemesanan langsung cepat via WhatsApp.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">Domain: Custom .my.id</span>
+              <a href="https://belitelur.my.id/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 group-hover:translate-x-0.5 transition-transform">
+                <span>Kunjungi Web</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: dashboard.qosjogja.site -->
+        <div class="rounded-2xl bg-slate-900/70 border border-slate-800 overflow-hidden flex flex-col hover:border-sky-500/50 transition group">
+          <div class="h-48 bg-gradient-to-tr from-sky-950/40 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800/80 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+            <div class="text-center z-10">
+              <span class="inline-block p-3 rounded-xl bg-sky-500/20 text-sky-400 mb-2 font-mono text-2xl font-bold">📊</span>
+              <div class="font-mono text-sm text-slate-300 font-semibold">dashboard.qosjogja.site</div>
+              <div class="text-xs text-sky-400 font-mono">Web Application & Monitoring</div>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-sky-950 text-sky-400 border border-sky-800/60">Live Dashboard</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-indigo-950 text-indigo-400 border border-indigo-800/60">Tools Internal</span>
+              </div>
+              <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition">QoS Jogja Monitoring System</h4>
+              <p class="text-slate-400 text-sm mt-2">
+                Sistem dashboard monitoring dan visualisasi data performa layanan, responsif dan ringan dibuka di perangkat manapun.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">Domain: Subdomain Custom</span>
+              <a href="https://dashboard.qosjogja.site/" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 group-hover:translate-x-0.5 transition-transform">
+                <span>Buka Dashboard</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Dummy Showcase (Google Sheets & Booking Demo) -->
+        <div class="rounded-2xl bg-slate-900/70 border border-slate-800 overflow-hidden flex flex-col hover:border-emerald-500/50 transition group">
+          <div class="h-48 bg-gradient-to-tr from-emerald-950/40 to-slate-900 flex items-center justify-center p-6 border-b border-slate-800/80 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+            <div class="text-center z-10">
+              <span class="inline-block p-3 rounded-xl bg-emerald-500/20 text-emerald-400 mb-2 font-mono text-2xl font-bold">⚡</span>
+              <div class="font-mono text-sm text-slate-300 font-semibold">Demo Form & Spreadsheet</div>
+              <div class="text-xs text-emerald-400 font-mono">Automasi Google Apps Script</div>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-950 text-emerald-400 border border-emerald-800/60">Demo Interaktif</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-slate-800 text-slate-300">No Server Cost</span>
+              </div>
+              <h4 class="text-lg font-bold text-white group-hover:text-emerald-400 transition">Katalog & Booking Salon/Jasa</h4>
+              <p class="text-slate-400 text-sm mt-2">
+                Contoh implementasi form reservasi pelanggan: input data dari web langsung masuk ke Google Sheet dan otomatis kirim email konfirmasi.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">Simulasi Ready</span>
+              <button onclick="openDemoModal()" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+                <span>Coba Alur Demo</span>
+                <i data-lucide="play-circle" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE DEMO MODAL -->
+  <div id="demoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-lg rounded-2xl p-6 shadow-2xl relative">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="text-xs font-mono text-slate-400 ml-2">Simulasi Alur Google Form & Sheet</span>
+        </div>
+        <button onclick="closeDemoModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="mt-5 space-y-4">
+        <p class="text-sm text-slate-300">
+          Begini cara kerja sistem yang kami buat: Pengunjung mengisi form di landing page, data otomatis dicatat ke Google Spreadsheet milikmu secara real-time!
+        </p>
+
+        <form id="simulationForm" onsubmit="handleSimulateSubmit(event)" class="space-y-3">
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-1">Nama Klien / Pembeli</label>
+            <input type="text" id="simName" required placeholder="Contoh: Budi Santoso" class="w-full px-3 py-2 text-sm bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-sky-400">
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-1">Nomor WhatsApp</label>
+            <input type="tel" id="simWa" required placeholder="Contoh: 08123456789" class="w-full px-3 py-2 text-sm bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-sky-400">
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-400 mb-1">Pilihan Layanan / Produk</label>
+            <select id="simService" class="w-full px-3 py-2 text-sm bg-slate-950 border border-slate-800 rounded-lg text-white focus:outline-none focus:border-sky-400">
+              <option value="Landing Page Starter">Landing Page Starter</option>
+              <option value="Web Form + Google Sheet">Web Form + Google Sheet</option>
+              <option value="Custom Tools AppScript">Custom Tools AppScript</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full mt-2 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Simulasikan Kirim Data</span>
+          </button>
+        </form>
+
+        <!-- Simulated Sheet Result -->
+        <div id="simResult" class="hidden mt-4 p-3 bg-slate-950 rounded-xl border border-emerald-500/40 font-mono text-xs text-emerald-400">
+          <div class="flex items-center gap-2 text-slate-300 font-sans font-semibold mb-2">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <span>Data Berhasil Masuk ke Google Sheet (Simulasi):</span>
+          </div>
+          <div class="bg-slate-900 p-2 rounded border border-slate-800 text-[11px] space-y-1">
+            <div id="resultRow1">Timestamp: <span class="text-slate-200" id="resTime"></span></div>
+            <div id="resultRow2">Nama: <span class="text-slate-200" id="resName"></span></div>
+            <div id="resultRow3">WhatsApp: <span class="text-slate-200" id="resWa"></span></div>
+            <div id="resultRow4">Layanan: <span class="text-slate-200" id="resService"></span></div>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-2 font-sans">
+            🚀 *Pada implementasi aslinya, data ini langsung terkirim ke Google Spreadsheet pribadimu & ada trigger notifikasi email.*
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING / PAKET HARGA -->
+  <section id="harga" class="py-20 lg:py-28 bg-slate-950/70 border-t border-slate-800/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Harga Transparan & Adil</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+          Investasi Sekali, Aktif Selamanya.
+        </h2>
+        <p class="text-slate-400 mt-4 text-base">
+          Pilih paket yang paling pas untuk skala bisnismu. Tanpa biaya tersembunyi, tanpa tagihan server bulanan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Paket 1: Starter -->
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition">
+          <div>
+            <div class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">Paket 01</div>
+            <h3 class="text-2xl font-bold text-white mb-2">Starter Landing Page</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Ideal untuk profil usaha, brosur digital, portofolio pribadi, atau link bio custom.</p>
+            
+            <div class="mb-6 pb-6 border-b border-slate-800">
+              <span class="text-4xl font-extrabold text-white">Rp 350.000</span>
+              <span class="text-xs text-slate-500 block mt-1 font-mono">Sekali bayar • Tanpa sewa hosting</span>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>1 Halaman Landing Page responsif</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>Free Hosting Lifetime (GitHub Pages)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>Tombol Chat WhatsApp Langsung</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>Desain Modern Dark/Light Mode</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>Pengerjaan Cepat (1-2 Hari)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20pesan%20Paket%20Starter%20350rb" 
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 transition">
+              <span>Pilih Paket Starter</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Paket 2: Automasi Bisnis (Best Seller) -->
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-sky-950/40 via-slate-900 to-slate-900 border-2 border-sky-400/80 shadow-xl shadow-sky-500/10 flex flex-col justify-between relative scale-105 z-10">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-sky-400 to-teal-400 text-slate-950 font-bold text-xs font-mono uppercase tracking-wider shadow">
+            🔥 Paling Populer (Best Value)
+          </div>
+
+          <div>
+            <div class="text-sky-400 font-mono text-xs uppercase tracking-wider mb-2">Paket 02</div>
+            <h3 class="text-2xl font-bold text-white mb-2">Bisnis & Automasi</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Paling pas untuk toko online, booking salon/jasa, reservasi meja, atau pendaftaran event.</p>
+            
+            <div class="mb-6 pb-6 border-b border-slate-800">
+              <span class="text-4xl font-extrabold text-white">Rp 650.000</span>
+              <span class="text-xs text-sky-400 block mt-1 font-mono">Sekali bayar • Sudah termasuk automasi</span>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span class="font-semibold text-white">Semua fitur Paket Starter</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span class="text-emerald-300 font-medium">Form Input Order / Reservasi Custom</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Database Google Spreadsheet Pribadi</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                <span>Notifikasi Email Real-time via Apps Script</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
+                <span>Bantuan Pasang Domain Sendiri (Opsional)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20tertarik%20dengan%20Paket%20Bisnis%20dan%20Automasi%20650rb" 
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-sky-400 via-teal-300 to-sky-400 hover:from-sky-300 hover:to-teal-200 shadow-md shadow-sky-500/20 transition">
+              <span>Pesan Paket Populer</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Paket 3: Custom Tools -->
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition">
+          <div>
+            <div class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">Paket 03</div>
+            <h3 class="text-2xl font-bold text-white mb-2">Custom Tools & Web App</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Untuk sistem internal perusahaan, dashboard data, generator invoice PDF, atau bot custom.</p>
+            
+            <div class="mb-6 pb-6 border-b border-slate-800">
+              <span class="text-3xl font-extrabold text-white">Mulai 1 Jt-an</span>
+              <span class="text-xs text-slate-500 block mt-1 font-mono">Sesuai kompleksitas kebutuhan alur</span>
+            </div>
+
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+                <span>Aplikasi Web / Dashboard Internal</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+                <span>Automasi Alur Kerja Khusus (Custom Script)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+                <span>Integrasi Multi-Sheets / Generate Dokumen</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+                <span>Pendampingan & Training Pemakaian</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20ingin%20diskusi%20kebutuhan%20Custom%20Tools%20atau%20Web%20App" 
+               target="_blank"
+               class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 transition">
+              <span>Konsultasikan Kebutuhan</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-20 border-t border-slate-800/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Tanya Jawab</span>
+        <h2 class="text-3xl font-extrabold text-white mt-2">Frequently Asked Questions</h2>
+        <p class="text-slate-400 text-sm mt-3">Jawaban atas pertanyaan yang paling sering diajukan calon klien kami.</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+          <h4 class="text-base font-bold text-white mb-2">Kenapa bisa gratis biaya hosting dan server selamanya?</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Kami memanfaatkan static web hosting tingkat dunia (seperti GitHub Pages / Vercel Cloud) yang menyediakan kuota gratis tanpa batas waktu untuk web modern. Untuk urusan backend & database, kami integrasikan dengan Google Cloud Apps Script dan Google Spreadsheet.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+          <h4 class="text-base font-bold text-white mb-2">Apakah saya tetap bisa pakai domain bisnis saya sendiri (.com / .id)?</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Tentu saja! Jika kamu sudah punya nama domain sendiri atau ingin beli nama domain (misal: <em>tokoanda.com</em>), kami akan bantu setting sambungkan domain tersebut ke websitemu tanpa biaya tambahan server.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+          <h4 class="text-base font-bold text-white mb-2">Berapa lama proses pembuatannya?</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Untuk paket Starter dan Landing Page standar, rata-rata selesai dalam 1 hingga 3 hari kerja setelah materi (teks/foto) lengkap. Untuk kebutuhan custom tools atau automasi khusus biasanya memakan waktu 3-7 hari kerja.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-900/60 border border-slate-800">
+          <h4 class="text-base font-bold text-white mb-2">Apakah data pelanggan saya di Google Sheet aman?</h4>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Sangat aman karena Google Spreadsheet tersebut berada langsung di dalam akun Google (Google Drive) milikmu sendiri. Hanya akun Google yang kamu beri izin yang bisa membuka atau mengakses datanya.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA FOOTER SECTION -->
+  <section class="py-20 bg-gradient-to-b from-slate-950 to-brand-dark border-t border-slate-800/80 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-sky-400 to-indigo-500 mx-auto flex items-center justify-center text-white mb-6 shadow-lg shadow-sky-500/25">
+        <i data-lucide="rocket" class="w-8 h-8"></i>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Siap Upgrade Bisnismu Hari Ini?
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto">
+        Diskusikan ide dan konsep websitemu bersama tim Revolabs Studio. Konsultasi 100% gratis tanpa komitmen!
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20konsultasi%20pembuatan%20website" 
+           target="_blank"
+           class="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-base font-bold text-slate-950 bg-gradient-to-r from-sky-400 to-teal-300 hover:from-sky-300 hover:to-teal-200 shadow-xl shadow-sky-500/25 hover:scale-105 transition-all">
+          <i data-lucide="message-square" class="w-5 h-5"></i>
+          <span>Hubungi via WhatsApp (0811-1706-996)</span>
+        </a>
+      </div>
+
+      <p class="text-xs text-slate-500 mt-4 font-mono">
+        Respons Cepat • Berbasis di Kalasan, Sleman, D.I. Yogyakarta
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-slate-900 bg-brand-dark text-slate-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-slate-300 text-sm">Revolabs Studio</span>
+        <span>•</span>
+        <span>Kalasan, Sleman, Yogyakarta</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://instagram.com/revolabs.studio" target="_blank" class="flex items-center gap-1.5 text-slate-400 hover:text-sky-400 transition">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          <span>@revolabs.studio</span>
+        </a>
+        <a href="https://wa.me/628111706996" target="_blank" class="flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>0811-1706-996</span>
+        </a>
+      </div>
+
+      <div>
+        <p>© 2026 Revolabs Studio. Developed with Antigravity.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for icons and interactive demo modal -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Modal Control
+    function openDemoModal() {
+      const modal = document.getElementById('demoModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeDemoModal() {
+      const modal = document.getElementById('demoModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.getElementById('simResult').classList.add('hidden');
+    }
+
+    // Simulate Data submission
+    function handleSimulateSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('simName').value;
+      const wa = document.getElementById('simWa').value;
+      const service = document.getElementById('simService').value;
+      const now = new Date().toLocaleString('id-ID');
+
+      document.getElementById('resTime').innerText = now;
+      document.getElementById('resName').innerText = name;
+      document.getElementById('resWa').innerText = wa;
+      document.getElementById('resService').innerText = service;
+
+      document.getElementById('simResult').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
