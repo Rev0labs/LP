@@ -6,8 +6,8 @@
   <title>Revolabs Studio | Jasa Website & Automasi Bebas Biaya Server</title>
   <meta name="description" content="Jasa pembuatan website modern, landing page, dan sistem automasi Google Apps Script tanpa biaya langganan server bulanan. Mulai Rp 350.000.">
   
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20100%22%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <!-- Favicon: Modern R Brand Logo -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2338bdf8'/%3E%3Cstop offset='100%25' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%23030712'/%3E%3Crect x='3' y='3' width='94' height='94' rx='21' fill='none' stroke='url(%23g)' stroke-width='4'/%3E%3Ctext x='50%25' y='68%25' text-anchor='middle' font-family='monospace' font-weight='900' font-size='56' fill='url(%23g)'%3ER%3C/text%3E%3C/svg%3E">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -460,78 +460,124 @@
   <section id="harga" class="py-20 lg:py-28 bg-slate-950/70 border-t border-slate-800/60 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Harga Transparan & Adil</span>
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-sky-400 font-mono text-xs uppercase tracking-widest font-semibold">Harga Terjangkau & Transparan</span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
           Investasi Sekali, Aktif Selamanya.
         </h2>
         <p class="text-slate-400 mt-4 text-base">
-          Pilih paket yang paling pas untuk skala bisnismu. Tanpa biaya tersembunyi, tanpa tagihan server bulanan.
+          Solusi web modern siap pakai untuk bisnis kamu. Bebas ribet, tanpa biaya sewa server bulanan, dan mudah dikelola sendiri!
         </p>
+      </div>
+
+      <!-- COUNTDOWN TIMER PROMO LAUNCHING -->
+      <div class="max-w-3xl mx-auto mb-16 p-6 rounded-2xl bg-gradient-to-r from-sky-950/60 via-indigo-950/50 to-slate-900 border border-sky-500/30 shadow-xl shadow-sky-500/10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold mb-3">
+          <i data-lucide="flame" class="w-3.5 h-3.5 text-amber-400 animate-bounce"></i>
+          <span>PROMO SPESIAL LAUNCHING • BERBATAS WAKTU</span>
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-white mb-2">
+          Diskon Terbatas untuk Batch Klien Pertama!
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 mb-5">
+          Dapatkan potongan harga langsung hingga <span class="text-emerald-400 font-bold">Rp 300.000</span> sebelum kuota promo bulan ini ditutup:
+        </p>
+
+        <!-- Countdown Display Blocks -->
+        <div class="grid grid-cols-4 gap-3 sm:gap-4 max-w-md mx-auto font-mono">
+          <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="timerDays" class="text-2xl sm:text-3xl font-extrabold text-sky-400">00</span>
+            <span class="block text-[10px] text-slate-400 uppercase tracking-wider mt-1">Hari</span>
+          </div>
+          <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="timerHours" class="text-2xl sm:text-3xl font-extrabold text-sky-400">00</span>
+            <span class="block text-[10px] text-slate-400 uppercase tracking-wider mt-1">Jam</span>
+          </div>
+          <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="timerMinutes" class="text-2xl sm:text-3xl font-extrabold text-sky-400">00</span>
+            <span class="block text-[10px] text-slate-400 uppercase tracking-wider mt-1">Menit</span>
+          </div>
+          <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="timerSeconds" class="text-2xl sm:text-3xl font-extrabold text-emerald-400">00</span>
+            <span class="block text-[10px] text-slate-400 uppercase tracking-wider mt-1">Detik</span>
+          </div>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
         
         <!-- Paket 1: Starter -->
-        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition">
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition group">
           <div>
-            <div class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">Paket 01</div>
-            <h3 class="text-2xl font-bold text-white mb-2">Starter Landing Page</h3>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">Ideal untuk profil usaha, brosur digital, portofolio pribadi, atau link bio custom.</p>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-slate-400 font-mono text-xs uppercase tracking-wider">Paket 01</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-sky-950 text-sky-300 border border-sky-800">Hemat 150rb</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Starter Profile</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Cocok untuk profil bisnis, brosur online, link bio Instagram, atau portofolio usaha agar makin terpercaya.</p>
             
             <div class="mb-6 pb-6 border-b border-slate-800">
-              <span class="text-4xl font-extrabold text-white">Rp 350.000</span>
-              <span class="text-xs text-slate-500 block mt-1 font-mono">Sekali bayar • Tanpa sewa hosting</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-xs text-slate-500 line-through font-mono">Rp 500.000</span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-white">Rp 350.000</span>
+              </div>
+              <span class="text-xs text-emerald-400 block mt-1 font-mono">Sekali bayar • Tanpa biaya bulanan</span>
             </div>
 
             <ul class="space-y-3 text-sm text-slate-300">
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
-                <span>1 Halaman Landing Page responsif</span>
+                <span>1 Halaman Web Cepat & Responsif di HP</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
-                <span>Free Hosting Lifetime (GitHub Pages)</span>
+                <span>Gratis Server/Hosting Selamanya</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
-                <span>Tombol Chat WhatsApp Langsung</span>
+                <span>Tombol Order / Chat WhatsApp Langsung</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
-                <span>Desain Modern Dark/Light Mode</span>
+                <span>Tampilan Elegan (Modern Dark / Light)</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
-                <span>Pengerjaan Cepat (1-2 Hari)</span>
+                <span>Pengerjaan Kilat (1-2 Hari Jadi)</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20pesan%20Paket%20Starter%20350rb" 
+            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20ambil%20Promo%20Paket%20Starter%20350rb" 
                target="_blank"
                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 transition">
-              <span>Pilih Paket Starter</span>
+              <span>Ambil Promo 350rb</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <!-- Paket 2: Automasi Bisnis (Best Seller) -->
-        <div class="p-8 rounded-2xl bg-gradient-to-b from-sky-950/40 via-slate-900 to-slate-900 border-2 border-sky-400/80 shadow-xl shadow-sky-500/10 flex flex-col justify-between relative scale-105 z-10">
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-sky-400 to-teal-400 text-slate-950 font-bold text-xs font-mono uppercase tracking-wider shadow">
-            🔥 Paling Populer (Best Value)
+        <!-- Paket 2: Dynamic Plus (Edit Sendiri via Spreadsheet) - BEST SELLER -->
+        <div class="p-8 rounded-2xl bg-gradient-to-b from-sky-950/50 via-slate-900 to-slate-900 border-2 border-sky-400/80 shadow-2xl shadow-sky-500/15 flex flex-col justify-between relative scale-105 z-10">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-sky-400 via-teal-300 to-emerald-400 text-slate-950 font-bold text-xs font-mono uppercase tracking-wider shadow">
+            ⭐ Paling Diminati (Best Choice)
           </div>
 
           <div>
-            <div class="text-sky-400 font-mono text-xs uppercase tracking-wider mb-2">Paket 02</div>
-            <h3 class="text-2xl font-bold text-white mb-2">Bisnis & Automasi</h3>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">Paling pas untuk toko online, booking salon/jasa, reservasi meja, atau pendaftaran event.</p>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sky-400 font-mono text-xs uppercase tracking-wider">Paket 02</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-emerald-950 text-emerald-300 border border-emerald-800">Hemat 300rb</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Dynamic Plus</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-6 font-medium">Bisa ganti harga, menu, promo, & foto sendiri kapan saja semudah mengetik di Excel/Spreadsheet dari HP!</p>
             
             <div class="mb-6 pb-6 border-b border-slate-800">
-              <span class="text-4xl font-extrabold text-white">Rp 650.000</span>
-              <span class="text-xs text-sky-400 block mt-1 font-mono">Sekali bayar • Sudah termasuk automasi</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-xs text-slate-400 line-through font-mono">Rp 850.000</span>
+                <span class="text-3xl sm:text-4xl font-extrabold text-white">Rp 550.000</span>
+              </div>
+              <span class="text-xs text-emerald-400 block mt-1 font-mono">Bebas update mandiri • Tanpa biaya admin</span>
             </div>
 
             <ul class="space-y-3 text-sm text-slate-300">
@@ -541,67 +587,74 @@
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                <span class="text-emerald-300 font-medium">Form Input Order / Reservasi Custom</span>
+                <span class="text-emerald-300 font-semibold">Bisa Edit Konten & Harga Sendiri via Google Sheets</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                <span>Database Google Spreadsheet Pribadi</span>
+                <span>Katalog Produk / Daftar Menu / Paket Usaha Dinamis</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                <span>Notifikasi Email Real-time via Apps Script</span>
+                <span>Form Pemesanan / Reservasi Langsung ke Spreadsheet</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-sky-400 shrink-0"></i>
-                <span>Bantuan Pasang Domain Sendiri (Opsional)</span>
+                <span>Bantuan Pasang Domain Sendiri (.my.id / .com)</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20tertarik%20dengan%20Paket%20Bisnis%20dan%20Automasi%20650rb" 
+            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20ambil%20Promo%20Paket%20Dynamic%20Plus%20550rb%20(Bisa%20Edit%20di%20Spreadsheet)" 
                target="_blank"
-               class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-sky-400 via-teal-300 to-sky-400 hover:from-sky-300 hover:to-teal-200 shadow-md shadow-sky-500/20 transition">
-              <span>Pesan Paket Populer</span>
+               class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-sky-400 via-teal-300 to-sky-400 hover:from-sky-300 hover:to-teal-200 shadow-lg shadow-sky-500/25 hover:scale-[1.02] transition">
+              <span>Ambil Promo 550rb Sekarang</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <!-- Paket 3: Custom Tools -->
-        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition">
+        <!-- Paket 3: Pro Commerce / Custom Tools -->
+        <div class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 flex flex-col justify-between transition group">
           <div>
-            <div class="text-slate-400 font-mono text-xs uppercase tracking-wider mb-2">Paket 03</div>
-            <h3 class="text-2xl font-bold text-white mb-2">Custom Tools & Web App</h3>
-            <p class="text-slate-400 text-xs leading-relaxed mb-6">Untuk sistem internal perusahaan, dashboard data, generator invoice PDF, atau bot custom.</p>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-slate-400 font-mono text-xs uppercase tracking-wider">Paket 03</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-indigo-950 text-indigo-300 border border-indigo-800">Solusi Lengkap</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Pro Commerce & Tools</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Dilengkapi keranjang belanja, kalkulasi otomatis, dan automasi notifikasi ke WhatsApp/Email.</p>
             
             <div class="mb-6 pb-6 border-b border-slate-800">
-              <span class="text-3xl font-extrabold text-white">Mulai 1 Jt-an</span>
-              <span class="text-xs text-slate-500 block mt-1 font-mono">Sesuai kompleksitas kebutuhan alur</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-white">Mulai 1 Jt-an</span>
+              <span class="text-xs text-slate-500 block mt-1 font-mono">Sesuai kebutuhan sistem bisnismu</span>
             </div>
 
             <ul class="space-y-3 text-sm text-slate-300">
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
-                <span>Aplikasi Web / Dashboard Internal</span>
+                <span class="font-semibold text-white">Semua fitur Paket Dynamic Plus</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
-                <span>Automasi Alur Kerja Khusus (Custom Script)</span>
+                <span>Fitur Keranjang Belanja / Booking Interaktif</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
-                <span>Integrasi Multi-Sheets / Generate Dokumen</span>
+                <span>Format Pesanan Rapi Otomatis ke WhatsApp Admin</span>
               </li>
               <li class="flex items-center gap-3">
                 <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
-                <span>Pendampingan & Training Pemakaian</span>
+                <span>Notifikasi Email / Auto-Invoice otomatis</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0"></i>
+                <span>Pendampingan & Panduan Pemakaian Lengkap</span>
               </li>
             </ul>
           </div>
 
           <div class="mt-8">
-            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20ingin%20diskusi%20kebutuhan%20Custom%20Tools%20atau%20Web%20App" 
+            <a href="https://wa.me/628111706996?text=Halo%20Revolabs%20Studio,%20saya%20mau%20konsultasi%20Paket%20Pro%20Commerce%20dan%20Tools" 
                target="_blank"
                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 transition">
               <span>Konsultasikan Kebutuhan</span>
@@ -751,6 +804,53 @@
 
       document.getElementById('simResult').classList.remove('hidden');
     }
+
+    // Launch Promo Countdown Timer (Persisted 30 Days Target)
+    function initPromoCountdown() {
+      const STORAGE_KEY = 'revolabs_promo_launch_end';
+      let targetTime = localStorage.getItem(STORAGE_KEY);
+
+      if (!targetTime) {
+        // Set 30 days from user first visit
+        const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
+        targetTime = Date.now() + thirtyDaysMs;
+        localStorage.setItem(STORAGE_KEY, targetTime);
+      } else {
+        targetTime = parseInt(targetTime, 10);
+      }
+
+      function updateCountdown() {
+        const now = Date.now();
+        let diff = targetTime - now;
+
+        if (diff <= 0) {
+          // Reset to 3 days if expired to keep urgency intact
+          targetTime = Date.now() + (3 * 24 * 60 * 60 * 1000);
+          localStorage.setItem(STORAGE_KEY, targetTime);
+          diff = targetTime - now;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        const dEl = document.getElementById('timerDays');
+        const hEl = document.getElementById('timerHours');
+        const mEl = document.getElementById('timerMinutes');
+        const sEl = document.getElementById('timerSeconds');
+
+        if (dEl) dEl.innerText = String(days).padStart(2, '0');
+        if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+        if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+        if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    initPromoCountdown();
   </script>
 </body>
 </html>
